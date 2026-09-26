@@ -29,13 +29,19 @@
                     <header class="mb-4">
                         <h1 class="display-4 mb-3">{{ page.title }}</h1>
                         <div class="text-muted mb-3">
-                            <i class="fas fa-calendar-alt"></i> {{ page.date | date: "%B %d, %Y" }}
+                            <i class="fas fa-calendar-alt"></i> {{ page.duration}}
                             {% if page.tags %}
                                 <span class="ml-3">
                                     <i class="fas fa-tags"></i>
                                     {% for tag in page.tags %}
                                         <span class="badge badge-light">{{ tag }}</span>
                                     {% endfor %}
+                                </span>
+                            {% endif %}
+                            {% if page.authors %}
+                                <span class="ml-3">
+                                    <i class="fas fa-user"></i>
+                                    {% include widgets/author_list.html authors=page.authors %}
                                 </span>
                             {% endif %}
                         </div>

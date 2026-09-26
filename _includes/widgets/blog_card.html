@@ -12,13 +12,19 @@
                 </a>
             </h5>
             <div class="text-muted small mb-2">
-                <i class="fas fa-calendar-alt"></i> {{ item.date | date: "%B %d, %Y" }}
+                <i class="fas fa-calendar-alt"></i> {% if item.duration %}<span>{{ item.duration }}</span>{% endif %}
                 {% if item.tags %}
                     <span class="ml-3">
                         <i class="fas fa-tags"></i>
                         {% for tag in item.tags %}
                             <span class="badge badge-light">{{ tag }}</span>
                         {% endfor %}
+                    </span>
+                {% endif %}
+                {% if item.authors %}
+                    <span class="ml-3">
+                        <i class="fas fa-user"></i>
+                        {% include widgets/author_list.html authors=item.authors %}
                     </span>
                 {% endif %}
             </div>
