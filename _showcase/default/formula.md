@@ -9,7 +9,7 @@ date: 2020-01-14 00:01:00 +0800
     <h5>Positions &amp; Memberships</h5>
     <hr />
     <ul class="list-unstyled mb-1">
-        {% for item in site.data.profile.positions %}
+        {% for item in site.data.profile.memberships %}
         <li class="media mb-2">
             {% if item.logo %}
             <img

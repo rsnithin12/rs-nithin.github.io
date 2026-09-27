@@ -37,7 +37,11 @@
                 <div class="row small">
                     <div class="col text-center">
                         <a class="email-text" href="mailto:{{ site.data.profile.email | encode_email }}">
-                            {{ site.data.profile.email | replace: "@", "(at)" }}
+                            <!-- {{ site.data.profile.email | replace: "@", "(at)" | replace: ".", "(dot)" }} -->
+                              <i class="fas fa-envelope mr-1"></i>{{ site.data.profile.email}}
+                        </a>
+                        <a class="email-text" href="tel:{{ site.data.profile.mobile }}">
+                            <i class="fas fa-phone mr-1"></i>{{ site.data.profile.mobile }}
                         </a>
                     </div>
                 </div>

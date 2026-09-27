@@ -9,6 +9,7 @@ positions:
   #logo: /assets/images/badges/MIT_Social_circle.png # Logo is optional
 
 email: "nithinrsn1515@gmail.com"
+mobile: "+91-9441085597"
 cv_link: /assets/CV_RS_Nithin.pdf
 gscholar: 1mGBzp4AAAAJ&hl=en&oi=ao # This is an example, replace it with your own Google Scholar ID
 github: rsnithin12
@@ -114,7 +115,7 @@ scholarships:
       Awarded a monthly stipend based on a valid Graduate Aptitude Test in Engineering score in Data Science and Artificial 
       Intelligence paper, for full-time Master’s studies.
 
-positions:
+memberships:
   - name: Post Gradute Campus Recruitment Coordinator
     logo: /assets/images/badges/nit_logo.png
     date: Aug. 2025 - Jul. 2026
