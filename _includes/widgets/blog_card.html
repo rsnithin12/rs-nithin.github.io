@@ -30,9 +30,9 @@
             </div>
             <div class="text-muted small">
                 {% if item.excerpt %}
-                    {{ item.excerpt | strip_html | truncate: 500 }}
+                    {{ item.excerpt | strip_html | truncate: 800 }}
                 {% else %}
-                    {{ item.content | strip_html | truncate: 500 }}
+                    {{ item.content | strip_html | truncate: 800 }}
                 {% endif %} 
             </div>
             <!-- <div class="mt-2">
