@@ -92,6 +92,32 @@ experience:
 
 awards:
   - name: Certificate of Excellence for Bachelor of Technology Batch 2020-2024
-    date: 2025
+    logo: /assets/images/badges/srgec_logo.png
+    date: Apr. 2025
+    institute: Seshadri Rao Gudlavalleru Engineering College
+    infoaward: >-
+      Awarded for outstanding academic performance and exceptional contributions to the field of Artificial Intelligence and Data Science during the Bachelor of Technology program of Batch 2020-2024.
+
   - name: TCSCodeVita Season 11 Global Ranker
-    date: 2024
+    logo: /assets/images/badges/tcs_logo.png
+    date: Mar. 2024
+    institute: Tata Consultancy Services
+    infoaward: >-
+      Achieved a global rank in the TCS CodeVita Season 11 coding competition, demonstrating exceptional problem-solving skills and proficiency in programming.
+
+scholarships:
+  - name: AICT Post Graduate (PG) Scholarship
+    logo: /assets/images/badges/aict_logo.png
+    date: Aug. 2024 - Jul. 2026
+    institute: All India Council for Technical Education (AICTE), MHRD, Government of India
+    infoscholarship: >-
+      Awarded a monthly stipend based on a valid Graduate Aptitude Test in Engineering score in Data Science and Artificial 
+      Intelligence paper, for full-time Master’s studies.
+
+positions:
+  - name: Post Gradute Campus Recruitment Coordinator
+    logo: /assets/images/badges/nit_logo.png
+    date: Aug. 2025 - Jul. 2026
+    institute: Department of Training and Placement, National Institute of Technology Srinagar
+    infomembership: >-
+      Active member of the Department of Training and Placement, National Institute of Technology Srinagar, responsible for coordinating campus recruitment activities and facilitating the placement of students.

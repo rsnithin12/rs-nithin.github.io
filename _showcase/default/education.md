@@ -1,24 +1,25 @@
 ---
-show: false
-width: 6
-date: 2020-01-12 00:01:00 +0800
+show: true
+width: 4
+date: 2019-09-12 00:01:00 +0800
+height: 295px
+
+# Awards Images
+images:
+  - src: "/assets/images/photos/oracelAI.jpg"
+    title: Oracel AI certification
+
+  - src: "/assets/images/photos/microsoft.jpg"
+    title: Microsoft certification
+
+  - src: "/assets/images/photos/oracelDS.jpg"
+    title: Oracel DS certification
+
+  - src: "/assets/images/photos/cybersecurity.jpg"
+    title: Cybersecurity certification
+
+  - src: "/assets/images/photos/ciscopython.jpg"
+    title: Cisco Python certification
 ---
 
-<div class="m-4">
-    <h5>Education</h5>
-    <ul class="list-unstyled mb-1">
-        {% for item in site.data.profile.education %}
-        <li class="media mb-1">
-            <img src="{{ item.logo | relative_url }}" alt="{{ item.name }}" style="width: 18px;" class="mr-1 mt-1">
-            <div class="media-body">
-                <div>{{ item.name }}</div>
-                <div class="small">{{ item.dept }}</div>
-                <div class="small d-flex">
-                    <div>{{ item.position }}</div>
-                    <div class="mt-auto ml-auto no-break"><em>{{ item.date }}</em></div>
-                </div>
-            </div>
-        </li>
-        {% endfor %}
-    </ul>
-</div>
+{% include widgets/carousel.html id=page.id images=page.images height=page.height %}

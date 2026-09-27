@@ -1,8 +1,10 @@
 ---
 show: true
 width: 4
-date: 2021-09-12 00:01:00 +0800
+date: 2025-09-12 00:01:00 +0800
 height: 295px
+
+# Awards Images
 images:
   - src: "/assets/images/photos/tcs_code.jpg"
     title: TCS Code Vita

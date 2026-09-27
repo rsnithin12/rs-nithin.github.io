@@ -1,15 +1,15 @@
 <div>
-    <div id="{{ include.id | slugify }}" class="carousel slide" data-ride="carousel">
+    <div id="{{ include.id | slugify }}" class="carousel slide" data-ride="carousel" data-interval="2000">
         <div class="carousel-indicators">
             {% for item in include.images %}
             <button type="button" data-target="#{{ include.id | slugify }}" data-slide-to="{{ forloop.index0 }}" aria-label="Show slide {{ forloop.index }}" {% if forloop.index == 1 %}class="active"{% endif %}></button>
             {% endfor %}
         </div>
-        <div class="carousel-inner" style="height: {{ include.height }};">
+        <div class="carousel-inner" data-height="{{ include.height | escape }}" style="height: var(--carousel-height, 100%);">
             {% for item in include.images %}
             <div class="carousel-item {% if forloop.index == 1 %}active{% endif %}">
                 {% if item.link %}<a href="{{ item.link }}" target="_blank">{% endif %}
-                <div class="lazy always-load d-block rounded-xl" style="height: {{ include.height }}; background-image: url('{{ item.src | relative_url }}'); background-size: contain; background-position: center; background-repeat: no-repeat;">
+                <div class="lazy always-load d-block rounded-xl" data-height="{{ include.height | escape }}" style="background-image: url('{{ item.src | relative_url }}'); background-size: contain; background-position: center; background-repeat: no-repeat;">
                 </div>
                 <div class="carousel-caption d-none d-md-block" style="bottom: -25px;">
                     <h5 style="color: #333;">{{ item.title }}</h5>
@@ -28,4 +28,19 @@
             <span class="sr-only">Next</span>
         </button>
     </div>
+    <script>
+        document.querySelectorAll('.carousel-inner[data-height]').forEach(function (el) {
+            var height = el.getAttribute('data-height');
+            if (height && height.trim()) {
+                el.style.setProperty('--carousel-height', height.trim());
+                el.style.height = height.trim();
+            }
+        });
+        document.querySelectorAll('.carousel-item [data-height]').forEach(function (el) {
+            var height = el.getAttribute('data-height');
+            if (height && height.trim()) {
+                el.style.height = height.trim();
+            }
+        });
+    </script>
 </div>
